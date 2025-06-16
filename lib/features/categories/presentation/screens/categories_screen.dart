@@ -18,7 +18,7 @@ class CategoriesScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               35.width,
-              MyText("Categories"),
+              MyText("Kategoriyalar"),
               SizedBox(
                 width: 35,
                 height: 35,

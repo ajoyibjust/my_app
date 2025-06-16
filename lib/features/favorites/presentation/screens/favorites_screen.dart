@@ -1,15 +1,20 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
+import 'package:my_app/core/widgets/my_text.dart';
+import 'package:my_app/features/favorites/presentation/widgets/favorite_body.dart';
 
-class FavoritesScreen extends StatefulWidget {
+class FavoritesScreen extends StatelessWidget {
   const FavoritesScreen({super.key});
 
   @override
-  State<FavoritesScreen> createState() => _FavoritesScreenState();
-}
-
-class _FavoritesScreenState extends State<FavoritesScreen> {
-  @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        centerTitle: true,
+       title: MyText("Sevimlilar"),
+      ),
+      body: FavoriteBody(),
+    );
   }
 }
