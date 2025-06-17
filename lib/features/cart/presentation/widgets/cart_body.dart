@@ -3,8 +3,8 @@ import 'package:my_app/core/extension/sizedBox_extension.dart';
 import 'package:my_app/core/utils/my_images.dart';
 import 'package:my_app/core/widgets/my_text.dart';
 
-class FavoriteBody extends StatelessWidget {
-  const FavoriteBody({super.key});
+class CartBody extends StatelessWidget {
+  const CartBody({super.key});
 
   @override
   Widget build(BuildContext context) {

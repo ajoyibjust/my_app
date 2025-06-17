@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/features/navigation/presentation/bottom_nav_screen.dart';
+import 'package:my_app/core/routes/app_router.dart';
 
 void main() {
   runApp(const MainApp());
@@ -10,9 +10,9 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      home: BottomNavScreen(),
+      routerConfig: appRouter,
     );
   }
 }
