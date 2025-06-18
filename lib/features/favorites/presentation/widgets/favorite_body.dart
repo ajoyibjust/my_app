@@ -16,7 +16,7 @@ class FavoriteBody extends StatelessWidget {
             ListView.separated(
               shrinkWrap: true,
               physics: const BouncingScrollPhysics(),
-              itemCount: 8,
+              itemCount: 3,
               itemBuilder: (context, index) {
                 return Stack(
                   children: [
@@ -73,7 +73,8 @@ class FavoriteBody extends StatelessWidget {
                                 onTap: () {
                                   //? Sevimlilardan o'chirish uchun button
                                 },
-                                child: Icon(Icons.clear_rounded)),
+                                child: Icon(Icons.clear_rounded),
+                              ),
                             ],
                           ),
                           MyText("Qty:1", color: Colors.grey),

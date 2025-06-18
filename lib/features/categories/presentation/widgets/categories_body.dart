@@ -40,7 +40,7 @@ class CategoriesBody extends StatelessWidget {
                 return Stack(
                   children: [
                     SizedBox(
-                      width: screenWidth(context) * 0.8,
+                      width: screenWidth(context) * 0.75,
                       height: 130,
                       child: DecoratedBox(
                         decoration: BoxDecoration(

@@ -16,7 +16,7 @@ class CartBody extends StatelessWidget {
             ListView.separated(
               shrinkWrap: true,
               physics: const BouncingScrollPhysics(),
-              itemCount: 8,
+              itemCount: 3,
               itemBuilder: (context, index) {
                 return Stack(
                   children: [
@@ -56,11 +56,13 @@ class CartBody extends StatelessWidget {
                         top: 5,
                         left: 100,
                         right: 10,
+                        bottom: 10,
                       ),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
+                        spacing: 2,
                         children: [
-                          5.height,
+                          3.height,
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -73,11 +75,27 @@ class CartBody extends StatelessWidget {
                                 onTap: () {
                                   //? Sevimlilardan o'chirish uchun button
                                 },
-                                child: Icon(Icons.clear_rounded)),
+                                child: Icon(
+                                  Icons.delete_forever,
+                                  color: Colors.grey,
+                                ),
+                              ),
                             ],
                           ),
-                          MyText("Qty:1", color: Colors.grey),
-                          10.height,
+                          Row(
+                            children: [
+                              MyText("Qty:1", color: Colors.grey),
+                              MyText(" | ", color: Colors.grey.shade400),
+                              ClipOval(
+                                child: SizedBox(
+                                  width: 12,
+                                  height: 12,
+                                  child: ColoredBox(color: Colors.blue),
+                                ),
+                              ),
+                              MyText(" Blue", color: Colors.grey),
+                            ],
+                          ),
                           Row(
                             children: [
                               MyText(
@@ -87,23 +105,56 @@ class CartBody extends StatelessWidget {
                               ),
                               MyText("\$60", color: Colors.grey),
                               Spacer(),
-                              GestureDetector(
-                                onTap: () {
-                                  //? Sevimlilardan cartga o'tish uchun button
-                                },
-                                child: SizedBox(
-                                  width: 30,
-                                  height: 30,
-                                  child: DecoratedBox(
-                                    decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      color: Colors.blueGrey,
-                                    ),
-                                    child: Icon(
-                                      Icons.card_travel_rounded,
-                                      color: Colors.white,
-                                      size: 18,
-                                    ),
+                              SizedBox(
+                                width: 90,
+                                height: 32,
+                                child: DecoratedBox(
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    color: Colors.white,
+                                  ),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceAround,
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () {
+                                          //? Mahsulotni kamaytirish uchun button
+                                        },
+                                        child: SizedBox(
+                                          width: 26,
+                                          height: 26,
+                                          child: DecoratedBox(
+                                            decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
+                                              color: Colors.grey.shade200,
+                                            ),
+                                            child: Icon(Icons.remove, size: 18),
+                                          ),
+                                        ),
+                                      ),
+                                      MyText("1", size: 16),
+                                      GestureDetector(
+                                        onTap: () {
+                                          //? Mahsulotni sonini oshirish uchun button
+                                        },
+                                        child: SizedBox(
+                                          width: 26,
+                                          height: 26,
+                                          child: DecoratedBox(
+                                            decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
+                                              color: Colors.indigo,
+                                            ),
+                                            child: Icon(
+                                              Icons.add,
+                                              size: 18,
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 ),
                               ),
@@ -115,7 +166,7 @@ class CartBody extends StatelessWidget {
                   ],
                 );
               },
-              separatorBuilder: (context, index) => 10.height,
+              separatorBuilder: (context, index) => 15.height,
             ),
           ],
         ),
