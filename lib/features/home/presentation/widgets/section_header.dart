@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class SectionHeader extends StatelessWidget {
   final String title;
-  final VoidCallback? onViewAll;
+  final String onViewAll;
 
-  const SectionHeader({super.key, required this.title, this.onViewAll});
+  const SectionHeader({
+    super.key,
+    required this.title,
+    required this.onViewAll,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +21,9 @@ class SectionHeader extends StatelessWidget {
           style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
         ),
         GestureDetector(
-          onTap: onViewAll,
+          onTap: () {
+            context.push(onViewAll);
+          },
           child: const Text("View All", style: TextStyle(color: Colors.grey)),
         ),
       ],

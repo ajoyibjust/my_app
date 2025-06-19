@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/core/extension/sizedbox_extension.dart';
-import 'package:my_app/core/utils/my_images.dart';
-import 'package:my_app/core/widgets/my_text.dart';
-import 'package:my_app/features/home/presentation/widgets/product_grid.dart';
+import 'package:my_app/features/home/presentation/widgets/best_selling.dart';
+import 'package:my_app/features/home/presentation/widgets/new_arrivals_grid.dart';
+import 'package:my_app/features/home/presentation/widgets/offer_zone_grid.dart';
 import 'package:my_app/features/home/presentation/widgets/section_header.dart';
+import 'package:my_app/features/home/presentation/widgets/trending_product.dart';
 
 class HomeBody extends StatefulWidget {
   const HomeBody({super.key});
@@ -38,47 +38,26 @@ class _HomeBodyState extends State<HomeBody> {
                 ),
               ),
             ),
-            SizedBox(
-              width: double.infinity,
-              height: 200,
-              child: Stack(
-                children: [
-                  ClipRRect(
-                    borderRadius: BorderRadiusGeometry.circular(10),
-                    child: Image.asset(MyImages.banner, fit: BoxFit.cover),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.all(10),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        MyText(
-                          "Best Selling",
-                          color: Colors.white,
-                          size: 16,
-                          fontWeight: FontWeight.w600,
-                        ),
-                        MyText(
-                          "Comfars & Modern",
-                          color: Colors.white70,
-                          size: 16,
-                        ),
-                        MyText(
-                          "life Stylish Safa",
-                          color: Colors.white70,
-                          size: 16,
-                        ),
-                        50.height,
-                        MyText("View More", color: Colors.white, size: 16),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
 
-            SectionHeader(title: "Yangi kelganlar", onViewAll: SizedBox.shrink),
-            ProductGrid(),
+            BestSelling(),
+
+            SectionHeader(
+              title: "Yangi kelganlar",
+              onViewAll: "/categoriesItems",
+            ),
+            NewArrivalsGrid(),
+            SectionHeader(
+              title: "Trenddagi mebel",
+              onViewAll: "/categoriesItems",
+            ),
+            TrendingProduct(),
+            BestSelling(),
+
+            SectionHeader(
+              title: "Taklif zonasi",
+              onViewAll: "/categoriesItems",
+            ),
+            OfferZoneGrid(),
           ],
         ),
       ),

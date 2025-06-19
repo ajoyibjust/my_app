@@ -20,6 +20,7 @@ final GoRouter appRouter = GoRouter(
         favoritesRoutes,
         profileRoutes,
         categoryItems,
+        productDetailRoute,
       ],
     ),
   ],

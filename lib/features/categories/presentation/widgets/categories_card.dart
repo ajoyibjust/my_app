@@ -24,7 +24,7 @@ class CategoriesCard extends StatelessWidget {
             children: [
               GestureDetector(
                 onTap: () {
-                  context.push("/categoryItems");
+                  context.push("/productDetail");
                 },
                 child: SizedBox(
                   width: double.infinity,

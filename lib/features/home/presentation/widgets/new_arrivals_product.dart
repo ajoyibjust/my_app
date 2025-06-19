@@ -3,8 +3,8 @@ import 'package:go_router/go_router.dart';
 import 'package:my_app/core/utils/my_images.dart';
 import 'package:my_app/core/widgets/my_text.dart';
 
-class ProductCard extends StatelessWidget {
-  const ProductCard({super.key});
+class NewArrivalsProduct extends StatelessWidget {
+  const NewArrivalsProduct({super.key});
 
   @override
   Widget build(BuildContext context) {
