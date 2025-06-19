@@ -6,7 +6,6 @@ import 'package:my_app/core/routes/favorites_routes.dart';
 import 'package:my_app/core/routes/home_routes.dart';
 import 'package:my_app/core/routes/profile_routes.dart';
 
-
 final GoRouter appRouter = GoRouter(
   initialLocation: '/',
   routes: [
@@ -15,11 +14,12 @@ final GoRouter appRouter = GoRouter(
         return BottomNav(child: child);
       },
       routes: [
-       homeRoute,
-       categoriesRoutes,
-       cartRoute,
-       favoritesRoutes,
-       profileRoutes,
+        homeRoute,
+        categoriesRoutes,
+        cartRoute,
+        favoritesRoutes,
+        profileRoutes,
+        categoryItems,
       ],
     ),
   ],

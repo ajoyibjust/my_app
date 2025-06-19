@@ -78,7 +78,7 @@ class _HomeBodyState extends State<HomeBody> {
             ),
 
             SectionHeader(title: "Yangi kelganlar", onViewAll: SizedBox.shrink),
-            ProductGrid(products: products),
+            ProductGrid(),
           ],
         ),
       ),

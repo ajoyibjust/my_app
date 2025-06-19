@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
-import 'product_card.dart';
+import 'package:my_app/features/categories/presentation/widgets/categories_card.dart';
 
-class ProductGrid extends StatelessWidget {
-
-
-  const ProductGrid({super.key});
+class CategoriesGrid extends StatelessWidget {
+  const CategoriesGrid({super.key});
 
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
       shrinkWrap: true,
       physics: const BouncingScrollPhysics(),
-      itemCount: 4,
+      itemCount: 8,
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         mainAxisSpacing: 15,
@@ -19,10 +17,7 @@ class ProductGrid extends StatelessWidget {
         childAspectRatio: 0.7,
       ),
       itemBuilder: (context, index) {
-
-        return ProductCard(
-        
-        );
+        return CategoriesCard();
       },
     );
   }

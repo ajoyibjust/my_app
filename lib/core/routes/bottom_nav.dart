@@ -23,6 +23,7 @@ class BottomNav extends StatelessWidget {
       bottomNavigationBar: currentIndex == 2
           ? const SizedBox.shrink()
           : BottomNavigationBar(
+              backgroundColor: Colors.white,
               type: BottomNavigationBarType.fixed,
               selectedItemColor: Colors.black,
               unselectedItemColor: Colors.grey,
