@@ -14,13 +14,13 @@ final GoRouter appRouter = GoRouter(
         return BottomNav(child: child);
       },
       routes: [
-        homeRoute,
-        categoriesRoutes,
-        cartRoute,
-        favoritesRoutes,
-        profileRoutes,
-        categoryItems,
-        productDetailRoute,
+        ...homeRoutes,
+        ...categoriesRoutes,
+        ...cartRoute,
+        ...favoritesRoutes,
+        ...profileRoutes,
+        
+        
       ],
     ),
   ],
